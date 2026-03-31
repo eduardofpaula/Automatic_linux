@@ -17,8 +17,6 @@ Este repositório foi criado especialmente para profissionais que constantemente
 
 ### Linux
 - ✅ **Fedora** - Script completo disponível
-
-### Em desenvolvimento
 - 🔄 **Ubuntu/Debian** - Em breve
 - 🔄 **Arch Linux** - Em breve
 - 🔄 **Windows** - Em breve
@@ -66,18 +64,6 @@ Contribuições são muito bem-vindas! Se você tem scripts para outros sistemas
 3. Commit suas mudanças (`git commit -m 'Adiciona script para Ubuntu'`)
 4. Push para a branch (`git push origin feature/NovoScript`)
 5. Abra um Pull Request
-
-### 📋 Scripts Desejados
-
-- [ ] Ubuntu/Debian setup script
-- [ ] Arch Linux setup script  
-- [ ] Windows PowerShell script
-- [ ] Docker development environment
-- [ ] VS Code extensions installer
-
-## 📝 Licença
-
-Este projeto está sob a licença [MIT](LICENSE). Veja o arquivo `LICENSE` para mais detalhes.
 
 ## 👤 Autor
 
