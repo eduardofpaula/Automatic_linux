@@ -15,13 +15,13 @@ Este repositório foi criado especialmente para profissionais que constantemente
 
 ## Sistemas Suportados
 
-### Linux
-- ✅ **Fedora** - Script completo disponível
-- 🔄 **Ubuntu/Debian** - Em breve
-- 🔄 **Arch Linux** - Em breve
-- 🔄 **Windows** - Em breve
+- ![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white) **Fedora** - ✅
+- ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) **Ubuntu/Debian** - 🔄
+- ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white) **Arch Linux** - 🔄
+- ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) **Windows** - 🔄
 
 #### ⚙️ Configurações Automáticas
+
 - Configuração do GOPATH para Go
 - Configuração inicial do Git
 - Permissões do Docker para o usuário atual
@@ -30,7 +30,7 @@ Este repositório foi criado especialmente para profissionais que constantemente
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/Automatic_scripts.git
+   git clone https://github.com/eduardofpaula/Automatic_scripts.git
    cd Automatic_scripts
    ```
 
@@ -40,9 +40,9 @@ Este repositório foi criado especialmente para profissionais que constantemente
    ```
 
 3. **Execute o script:**
-    ```bash
-    ./linux/fedora-setup.sh
-    ```
+   ```bash
+   ./linux/fedora-setup.sh
+   ```
 
 4. **Siga as instruções na tela** para configurar Git e outras opções personalizáveis.
 
@@ -57,19 +57,14 @@ Este repositório foi criado especialmente para profissionais que constantemente
 
 ## 🤝 Contribuições
 
-Contribuições são muito bem-vindas! Se você tem scripts para outros sistemas operacionais ou melhorias para os existentes:
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/NovoScript`)
-3. Commit suas mudanças (`git commit -m 'Adiciona script para Ubuntu'`)
-4. Push para a branch (`git push origin feature/NovoScript`)
-5. Abra um Pull Request
+Contribuições são sempre muito bem-vindas! Sinta-se à vontade para abrir *Issues* relatando bugs ou sugerindo melhorias, e para enviar *Pull Requests* com novos scripts para outros sistemas operacionais ou aperfeiçoar os já existentes.
 
 ## 👤 Autor
 
 **Eduardo Farias**
+
 - GitHub: [@eduardofpaula](https://github.com/eduardofpaula)
-- Email: eduardo.paula01@fatec.sp.gov.br
+- Email: eduardo.fariasp@outlook.com
 
 ---
 
