@@ -15,10 +15,9 @@ Este repositório foi criado especialmente para profissionais que constantemente
 
 ## Sistemas Suportados
 
-- ![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white) **Fedora** - ✅
-- ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) **Ubuntu/Debian** - 🔄
-- ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white) **Arch Linux** - 🔄
-- ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) **Windows** - 🔄
+- ![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white) - ✅
+- ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) - 🔄
+- ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white) - 🔄
 
 #### ⚙️ Configurações Automáticas
 
@@ -34,12 +33,13 @@ Este repositório foi criado especialmente para profissionais que constantemente
    cd Automatic_scripts
    ```
 
-2. **Torne o script executável:**
+2. **Escolha o script correspondente à sua distribuição e torne-o executável:**
+   *(O exemplo abaixo usa o script do Fedora, altere para o da sua distro caso necessário)*
    ```bash
    chmod +x linux/fedora-setup.sh
    ```
 
-3. **Execute o script:**
+3. **Execute o script escolhido:**
    ```bash
    ./linux/fedora-setup.sh
    ```
@@ -62,7 +62,6 @@ Contribuições são sempre muito bem-vindas! Sinta-se à vontade para abrir *Is
 ## 👤 Autor
 
 **Eduardo Farias**
-
 - GitHub: [@eduardofpaula](https://github.com/eduardofpaula)
 - Email: eduardo.fariasp@outlook.com
 
