@@ -40,7 +40,7 @@ Este repositório foi criado especialmente para profissionais que constantemente
 **Aplicativos Flatpak:**
 - **Desenvolvimento e Produtividade:** DBeaver Community, Insomnia, IntelliJ IDEA Ultimate, PyCharm Professional, Obsidian, DevToolbox.
 - **Multimídia e Comunicação:** Stremio, Discord, Spotify, VLC.
-- **Utilitários:** ExtensionManager, Warehouse, Varia, Money.
+- **Utilitários:** ExtensionManager, Warehouse, Varia.
 
 **Repositórios:**
 - Flathub (Aplicativos em Flatpak)

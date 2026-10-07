@@ -67,7 +67,6 @@ declare -a flatpak_apps=(
     "com.jetbrains.PyCharm-Professional"
     "me.iepure.devtoolbox"
     "io.github.giantpinkrobots.varia"
-    "org.nickvision.money"
 )
 
 echo "📦 Instalando apps via Flatpak..."
