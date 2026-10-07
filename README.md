@@ -16,44 +16,64 @@ Este repositório foi criado especialmente para profissionais que constantemente
 ## Sistemas Suportados
 
 - ![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white) - ✅
-- ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) - 🔄
+- ![Pop!_OS](https://img.shields.io/badge/Pop!_OS-48B9C7?style=for-the-badge&logo=pop-os&logoColor=white) - ✅
 - ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white) - 🔄
 
-#### ⚙️ Configurações Automáticas
+## O que é instalado?
 
-- Configuração do GOPATH para Go
-- Configuração inicial do Git
-- Permissões do Docker para o usuário atual
+**Pacotes e Ferramentas Básicas CLI:**
+- Git, Curl, Wget, Unzip, Htop, Fastfetch
+- Zsh, GNOME Tweaks, Flatpak
+- apt-transport-https, software-properties-common
+
+**Linguagens e Ferramentas de Desenvolvimento:**
+- Build-essential (gcc, g++, make), CMake
+- Python 3 e Pip
+- Java 21 (OpenJDK)
+- Node.js
+- Go
+
+**Containers:**
+- Docker (CE, CLI, Compose, Buildx)
+- Lazydocker
+
+**Aplicativos Flatpak:**
+- **Desenvolvimento e Produtividade:** DBeaver Community, Insomnia, IntelliJ IDEA Ultimate, PyCharm Professional, Obsidian, DevToolbox.
+- **Multimídia e Comunicação:** Stremio, Discord, Spotify, VLC.
+- **Utilitários:** ExtensionManager, Warehouse, Varia, Money.
+
+**Repositórios Oficiais:**
+- Visual Studio Code
 
 ## Como Usar
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/eduardofpaula/Automatic_scripts.git
+   git clone [https://github.com/eduardofpaula/Automatic_scripts.git](https://github.com/eduardofpaula/Automatic_scripts.git)
    cd Automatic_scripts
    ```
 
 2. **Escolha o script correspondente à sua distribuição e torne-o executável:**
-   *(O exemplo abaixo usa o script do Fedora, altere para o da sua distro caso necessário)*
+   *(O exemplo abaixo usa o script do Pop!_OS, altere para o da sua distro caso necessário)*
    ```bash
-   chmod +x linux/fedora-setup.sh
+   chmod +x linux/popos-setup.sh
    ```
 
 3. **Execute o script escolhido:**
    ```bash
-   ./linux/fedora-setup.sh
+   ./linux/popos-setup.sh
    ```
 
-4. **Siga as instruções na tela** para configurar Git e outras opções personalizáveis.
+4. **Siga as instruções na tela para configurar Git e outras opções personalizáveis.**
 
-5. **Reinicie o sistema** após a conclusão para aplicar todas as configurações.
+5. **Reinicie o sistema após a conclusão para aplicar todas as configurações.**
 
 ## ⚠️ Importante
 
-- ⚡ **Execute com cuidado**: Os scripts fazem alterações significativas no sistema
-- 🔒 **Sudo necessário**: Alguns comandos requerem privilégios administrativos
-- 💾 **Backup recomendado**: Faça backup de configurações importantes antes de executar
-- 🔄 **Reinicialização**: Reinicie o sistema após a execução para aplicar todas as mudanças
+- ⚡ **Execute com cuidado:** Os scripts fazem alterações significativas no sistema
+- 🔒 **Sudo necessário:** Alguns comandos requerem privilégios administrativos
+- 💾 **Backup recomendado:** Faça backup de configurações importantes antes de executar
+- 🔄 **Reinicialização:** Reinicie o sistema após a execução para aplicar todas as mudanças (especialmente permissões de grupo do Docker).
 
 ## 🤝 Contribuições
 
