@@ -73,7 +73,7 @@ declare -a flatpak_apps=(
 echo "📦 Instalando apps via Flatpak..."
 for app in "${flatpak_apps[@]}"; do
     echo "  Instalando $app..."
-    flatpak install -y flathub "$app" || echo "  ⚠️ Falha ao instalar $app"
+    sudo flatpak install --system --noninteractive -y flathub "$app" || echo "  ⚠️ Falha ao instalar $app"
 done
 
 # Instalar Visual Studio Code

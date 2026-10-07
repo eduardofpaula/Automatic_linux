@@ -17,6 +17,10 @@ if ! grep -qi "pop" /etc/os-release; then
     exit 1
 fi
 
+# Adicionar repositórios PPA separadamente
+echo "📦 Adicionando repositórios PPA..."
+sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
+
 # Atualizar o sistema
 echo "🔄 Atualizando repositórios e pacotes do sistema..."
 sudo apt update && sudo apt upgrade -y
@@ -50,7 +54,7 @@ fi
 
 # Configurar Flatpak e instalar apps
 # Adicionar repositório Flathub (Pop!_OS já vem com Flatpak, mas é bom garantir o flathub)
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Lista de apps Flatpak para instalar
 declare -a flatpak_apps=(
@@ -73,7 +77,7 @@ declare -a flatpak_apps=(
 echo "📦 Instalando apps via Flatpak..."
 for app in "${flatpak_apps[@]}"; do
     echo "  Instalando $app..."
-    flatpak install -y flathub "$app" || echo "  ⚠️ Falha ao instalar $app"
+    sudo flatpak install --system --noninteractive -y flathub "$app" || echo "  ⚠️ Falha ao instalar $app"
 done
 
 # Instalar Visual Studio Code via repositório APT oficial da Microsoft
