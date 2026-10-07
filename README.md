@@ -42,8 +42,10 @@ Este repositório foi criado especialmente para profissionais que constantemente
 - **Multimídia e Comunicação:** Stremio, Discord, Spotify, VLC.
 - **Utilitários:** ExtensionManager, Warehouse, Varia, Money.
 
-**Repositórios Oficiais:**
-- Visual Studio Code
+**Repositórios:**
+- Flathub (Aplicativos em Flatpak)
+- Microsoft (Visual Studio Code)
+- Docker (Docker Engine, CLI e Plugins)
 
 ## Como Usar
 
