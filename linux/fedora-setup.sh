@@ -101,13 +101,22 @@ if ! groups "$USER" | grep -q docker; then
     echo "  👤 Usuário $USER adicionado ao grupo docker"
 fi
 
+# Instalar Lazydocker
+echo "🐳 Instalando Lazydocker..."
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 # Git config
 echo "🔧 Configurando Git..."
-read -p "Digite seu nome para o Git (ou pressione Enter para usar 'Eduardo Farias'): " git_name
-read -p "Digite seu email para o Git (ou pressione Enter para usar 'eduardo.paula01@fatec.sp.gov.br'): " git_email
 
-git_name=${git_name:-"eduardofpaula"}
-git_email=${git_email:-"eduardo.paula01@fatec.sp.gov.br"}
+git_name=""
+while [ -z "$git_name" ]; do
+    read -p "Digite seu nome para o Git: " git_name
+done
+
+git_email=""
+while [ -z "$git_email" ]; do
+    read -p "Digite seu email para o Git: " git_email
+done
 
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
@@ -118,5 +127,9 @@ echo "  Nome: $git_name"
 echo "  Email: $git_email"
 
 git config --list --show-origin
+
+# Limpar pacotes desnecessários
+echo "🧹 Limpando o sistema..."
+sudo apt autoremove -y
 
 echo "✅ Setup concluído! Reinicie o sistema ou faça logout para aplicar todas as permissões e variáveis."
