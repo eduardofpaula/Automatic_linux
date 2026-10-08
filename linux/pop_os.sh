@@ -17,9 +17,10 @@ if ! grep -qi "pop" /etc/os-release; then
     exit 1
 fi
 
-# Adicionar repositórios PPA separadamente
-echo "📦 Adicionando repositórios PPA..."
+# Adicionar repositórios
+echo "📦 Gerenciando repositórios"
 sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 
 # Atualizar o sistema
 echo "🔄 Atualizando repositórios e pacotes do sistema..."
@@ -35,14 +36,30 @@ sudo apt install -y zsh gnome-tweaks flatpak
 # Instalar ferramentas de desenvolvimento (gcc, g++, make, cmake)
 sudo apt install -y build-essential cmake
 
-# Instalar Python 3 e pip
-sudo apt install -y python3 python3-pip
+# 🟢 Node.js (via NodeSource - Versão LTS mais recente)
+echo "🟢 Instalando Node.js oficial..."
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
 
-# Instalar Java 21 (JDK inclui a JRE e ferramentas de compilação)
-sudo apt install -y openjdk-21-jdk
+# 🐹 Go (via PPA Oficial da Comunidade Ubuntu)
+echo "🐹 Instalando Go atualizado..."
+sudo add-apt-repository -y ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install -y golang-go
 
-# Instalar Node.js e Go
-sudo apt install -y nodejs golang
+# ☕ Java (via Eclipse Adoptium / Temurin JDK 21)
+echo "☕ Instalando Java (Temurin 21)..."
+sudo mkdir -p /etc/apt/keyrings
+wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /etc/apt/keyrings/adoptium.asc > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
+sudo apt update
+sudo apt install -y temurin-21-jdk
+
+# 🐍 Python (via Deadsnakes PPA para versões mais novas)
+echo "🐍 Adicionando repositório Python atualizado..."
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install -y python3 python3-pip python3.14
 
 # Configurar GOPATH
 echo "🔧 Configurando Go..."

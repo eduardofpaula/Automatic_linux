@@ -33,12 +33,28 @@ sudo dnf5 install -y git curl wget unzip htop fastfetch
 sudo dnf5 install -y zsh gnome-tweaks flatpak
 # Instalar ferramentas de desenvolvimento
 sudo dnf5 install -y gcc g++ make cmake
-# Instalar Python 3 e pip
-sudo dnf5 install -y python3 python3-pip
-# Instalar Java 21, troque a versão conforme necessário
-sudo dnf5 install -y java-21-openjdk java-21-openjdk-devel
-# Instalar Node.js e Go
-sudo dnf5 install -y nodejs golang
+
+# 🟢 Node.js (via NodeSource RPM - Versão LTS mais recente)
+echo "🟢 Instalando Node.js oficial..."
+curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -
+sudo dnf install -y nodejs
+
+# ☕ Java (via Eclipse Adoptium / Temurin JDK 21 RPM)
+echo "☕ Instalando Java (Temurin 21)..."
+cat <<EOF | sudo tee /etc/yum.repos.d/adoptium.repo
+[Adoptium]
+name=Adoptium
+baseurl=https://packages.adoptium.net/artifactory/rpm/fedora/\$releasever/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
+EOF
+sudo dnf install -y temurin-21-jdk
+
+# 🐹 Go e 🐍 Python
+# No Fedora, os repositórios padrão JÁ SÃO as versões mais recentes disponíveis para Linux.
+echo "🐹🐍 Instalando Go e Python (O Fedora já possui as últimas versões nativamente)..."
+sudo dnf install -y golang python3 python3-pip
 
 # Configurar GOPATH
 echo "🔧 Configurando Go..."
